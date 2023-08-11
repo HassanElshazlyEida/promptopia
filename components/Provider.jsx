@@ -1,7 +1,11 @@
+"use client";
+import {SessionProvider} from "next-auth/react";
 
-const Feed = () => {
+const Feed = ({children,session}) => {
     return (
-        <div> </div>
+        <SessionProvider session={session}>
+            {children}
+        </SessionProvider>
     )
 }
 export default Feed  
